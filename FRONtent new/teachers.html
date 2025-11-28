@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers | School Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Extra improvements for teacher cards */
+        .teacher-card {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        .teacher-photo {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #ddd;
+            margin-right: 15px;
+        }
+
+        .teacher-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .teacher-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .teacher-actions {
+            margin-left: auto;
+        }
+
+        .teacher-actions button {
+            margin-left: 6px;
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .filter-row select, .filter-row input {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>School System</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a class="active" href="teachers.html">Teachers</a></li>
+            <li><a href="fees.html">Fees</a></li>
+            <li><a href="reports.html">Reports</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content page">
+
+        <h1>Teachers</h1>
+
+        <!-- Filters -->
+        <div class="toolbar">
+            <input type="text" placeholder="Search teachers...">
+            <button class="add-btn" onclick="window.location.href='add-teacher.html'">+ Add Teacher</button>
+        </div>
+
+        <div class="filter-row">
+            <select>
+                <option>Filter by Subject</option>
+                <option>Math</option>
+                <option>Science</option>
+                <option>English</option>
+                <option>Computer</option>
+                <option>Social Studies</option>
+            </select>
+
+            <select>
+                <option>Filter by Class</option>
+                <option>1st - 5th</option>
+                <option>6th - 8th</option>
+                <option>9th - 10th</option>
+            </select>
+        </div>
+
+        <!-- Teacher List -->
+        <div class="white-card">
+
+            <div class="teacher-card">
+                <div class="teacher-photo"></div>
+                <div class="teacher-info">
+                    <h3>Mr. Rajesh Kumar</h3>
+                    <p>Math Teacher | Class: 7th–10th</p>
+                </div>
+                <div class="teacher-actions">
+                    <button class="small-btn">Edit</button>
+                    <button class="small-btn btn-danger">Delete</button>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <div class="teacher-photo"></div>
+                <div class="teacher-info">
+                    <h3>Mrs. Neha Kapoor</h3>
+                    <p>English Teacher | Class: 5th–8th</p>
+                </div>
+                <div class="teacher-actions">
+                    <button class="small-btn">Edit</button>
+                    <button class="small-btn btn-danger">Delete</button>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <div class="teacher-photo"></div>
+                <div class="teacher-info">
+                    <h3>Mr. Arvind Mishra</h3>
+                    <p>Science Teacher | Class: 6th–10th</p>
+                </div>
+                <div class="teacher-actions">
+                    <button class="small-btn">Edit</button>
+                    <button class="small-btn btn-danger">Delete</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

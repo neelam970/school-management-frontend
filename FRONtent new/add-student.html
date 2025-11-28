@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student | School Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>School System</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a class="active" href="students.html">Students</a></li>
+            <li><a href="teachers.html">Teachers</a></li>
+            <li><a href="fees.html">Fees</a></li>
+            <li><a href="reports.html">Reports</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content page">
+
+        <h1>Add Student</h1>
+
+        <div class="white-card" style="max-width:700px; margin:auto;">
+
+            <form>
+
+                <div class="form-row">
+                    <label>Full Name:</label>
+                    <input type="text" placeholder="Enter student's full name">
+                </div>
+
+                <div class="form-row">
+                    <label>Class:</label>
+                    <select>
+                        <option>Select Class</option>
+                        <option>1st</option>
+                        <option>2nd</option>
+                        <option>3rd</option>
+                        <option>4th</option>
+                        <option>5th</option>
+                        <option>6th</option>
+                        <option>7th</option>
+                        <option>8th</option>
+                        <option>9th</option>
+                        <option>10th</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>Roll Number:</label>
+                    <input type="number" placeholder="Enter roll number">
+                </div>
+
+                <div class="form-row">
+                    <label>Parent Name:</label>
+                    <input type="text" placeholder="Enter parent's name">
+                </div>
+
+                <div class="form-row">
+                    <label>Phone Number:</label>
+                    <input type="text" placeholder="Enter parent's phone">
+                </div>
+
+                <div class="form-row">
+                    <label>Address:</label>
+                    <input type="text" placeholder="Enter full address">
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn-ghost" type="button" onclick="window.location.href='students.html'">Cancel</button>
+                    <button class="add-btn" type="submit">Add Student</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

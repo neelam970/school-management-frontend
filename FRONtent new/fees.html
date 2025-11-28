@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees | School Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>School System</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="teachers.html">Teachers</a></li>
+            <li><a class="active" href="fees.html">Fees</a></li>
+            <li><a href="reports.html">Reports</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content page">
+
+        <h1>Fees Management</h1>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <input type="text" placeholder="Search fees records...">
+            <button class="add-btn">+ Add Payment</button>
+        </div>
+
+        <!-- Fees Table -->
+        <div class="white-card">
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Aarav Sharma</td>
+                    <td>5th</td>
+                    <td>₹1,200</td>
+                    <td style="color: green; font-weight:600;">Paid</td>
+                    <td>10 Feb 2025</td>
+                    <td>
+                        <button class="small-btn">Edit</button>
+                        <button class="small-btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Ananya Verma</td>
+                    <td>7th</td>
+                    <td>₹1,500</td>
+                    <td style="color: red; font-weight:600;">Pending</td>
+                    <td>12 Feb 2025</td>
+                    <td>
+                        <button class="small-btn">Edit</button>
+                        <button class="small-btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Rohan Singh</td>
+                    <td>9th</td>
+                    <td>₹1,800</td>
+                    <td style="color: green; font-weight:600;">Paid</td>
+                    <td>15 Feb 2025</td>
+                    <td>
+                        <button class="small-btn">Edit</button>
+                        <button class="small-btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

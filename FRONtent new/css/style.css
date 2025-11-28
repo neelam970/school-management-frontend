@@ -1,0 +1,285 @@
+/* General Reset */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #2575fc;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  overflow: auto;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 12px 18px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  opacity: 0.95;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #6a11cb;
+  border-radius: 6px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 220px;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+/* Headings */
+h1 {
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-size: 32px;
+}
+
+/* Dashboard Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #6a11cb;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+}
+
+.white-card {
+  background: #fff;
+  color: #222;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  padding: 18px;
+  border-radius: 10px;
+}
+
+/* Small UI */
+.toolbar {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.toolbar input {
+  padding:8px 10px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  flex: 1;
+  max-width:300px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+table, th, td {
+  border: 1px solid #eee;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Buttons */
+button, .add-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #2575fc;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover, .add-btn:hover {
+  background: #6a11cb;
+}
+
+/* secondary / ghost */
+.btn-ghost {
+  background: #f3f3f3;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 9px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.small-btn {
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  margin-right:6px;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background: #ff5c5c;
+  color: white;
+  border: none;
+}
+
+.hidden { display: none; }
+
+/* Forms in pages */
+form .form-row {
+  margin-bottom: 12px;
+}
+
+form .form-row label {
+  display:block;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+form .form-row input,
+form .form-row select {
+  width:100%;
+  padding:8px 10px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+
+.form-actions {
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  margin-top:8px;
+}
+
+/* Login Page (your previous rules) */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+.login-box {
+  background: white;
+  width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .sidebar { width: 180px; }
+  .main-content { margin-left: 180px; padding:16px; }
+  h1 { font-size: 26px; }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .main-content { margin-left: 0; padding: 12px; }
+  .cards { flex-direction: column; }
+  .toolbar { flex-direction: column; align-items: stretch; }
+  .toolbar input { max-width: none; width:100%; }
+}
+/* ------------------------------ */
+/* ANIMATIONS (ADD AT THE END)    */
+/* ------------------------------ */
+
+/* Fade-in animation for all pages */
+.page {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Smooth hover grow effect for cards */
+.card, .white-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover, .white-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Sidebar slide-in animation */
+.sidebar {
+  animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-220px); }
+  to   { transform: translateX(0); }
+}
+
+/* Button click animation */
+button:active, .add-btn:active {
+  transform: scale(0.96);
+}
+
+/* Smooth hover animation for sidebar menu */
+.sidebar ul li a {
+  transition: background 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover {
+  padding-left: 10px;
+}
+
+/* Table row hover effect */
+table tr:hover {
+  background: #f7f7f7;
+  transition: 0.2s;
+}
